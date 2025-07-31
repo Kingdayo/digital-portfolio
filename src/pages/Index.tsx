@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Loader } from '@/components/ui/loader';
+<<<<<<< HEAD
 import { ErrorBoundary } from '@/components/ErrorBoundary';
+=======
+>>>>>>> fecd584fa83f0f4c19d985967a1a61a4cbbb37c8
 import { ParticleBackground } from '@/components/ParticleBackground';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
@@ -19,7 +22,10 @@ const Index = () => {
     const duration = 3000; // 3 seconds
 
     let frameId: number;
+<<<<<<< HEAD
     let timeoutId: number;
+=======
+>>>>>>> fecd584fa83f0f4c19d985967a1a61a4cbbb37c8
     const frame = () => {
       const elapsedTime = Date.now() - startTime;
       const currentProgress = Math.min(elapsedTime / duration, 1);
@@ -36,12 +42,17 @@ const Index = () => {
 
     frameId = requestAnimationFrame(frame);
 
+<<<<<<< HEAD
     // Failsafe: force loading to false after 5s
     timeoutId = window.setTimeout(() => setLoading(false), 5000);
 
     return () => {
       cancelAnimationFrame(frameId);
       clearTimeout(timeoutId);
+=======
+    return () => {
+      cancelAnimationFrame(frameId);
+>>>>>>> fecd584fa83f0f4c19d985967a1a61a4cbbb37c8
     };
   }, []);
 
@@ -83,6 +94,7 @@ const Index = () => {
 
   return (
     <>
+<<<<<<< HEAD
       {/* Loader overlay, always on top, not affected by main content opacity */}
       {loading && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center bg-background/95">
@@ -93,6 +105,10 @@ const Index = () => {
       )}
       {/* Main content fades in only after loading is done */}
       <div className={`min-h-screen bg-background text-foreground relative overflow-x-hidden transition-opacity duration-1000 ease-in-out ${loading ? 'opacity-0 pointer-events-none select-none' : 'opacity-100'}`}>
+=======
+      {loading && <Loader progress={progress} />}
+      <div className={`min-h-screen bg-background text-foreground relative overflow-x-hidden transition-opacity duration-1000 ease-in-out ${loading ? 'opacity-0' : 'opacity-100'}`}>
+>>>>>>> fecd584fa83f0f4c19d985967a1a61a4cbbb37c8
         {/* Particle Background */}
         {!loading && <ParticleBackground />}
 

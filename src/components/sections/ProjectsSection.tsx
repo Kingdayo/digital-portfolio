@@ -14,6 +14,7 @@ const projects = [{
   codeUrl: '#'
 }, {
   id: 2,
+<<<<<<< HEAD
   title: 'Academic Task Reminder and Planner System',
   description: 'A system that helps students to keep track of their academic tasks and deadlines.',
   image: '/Screenshot 2025-07-31 052042.png',
@@ -21,6 +22,15 @@ const projects = [{
   category: 'Full-Stack',
   demoUrl: 'https://aurora-task-flow.netlify.app/',
   codeUrl: 'https://aurora-task-flow.netlify.app/'
+=======
+  title: 'AI-Powered Dashboard',
+  description: 'Interactive dashboard with machine learning insights and predictive analytics.',
+  image: '/placeholder.svg',
+  technologies: ['Vue.js', 'Python', 'TensorFlow', 'D3.js'],
+  category: 'Data Visualization',
+  demoUrl: '#',
+  codeUrl: '#'
+>>>>>>> fecd584fa83f0f4c19d985967a1a61a4cbbb37c8
 }, {
   id: 3,
   title: 'Mobile Fitness App',

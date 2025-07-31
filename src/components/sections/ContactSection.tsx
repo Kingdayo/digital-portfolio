@@ -12,7 +12,11 @@ const contactInfo = [
     icon: Mail,
     label: 'Email',
     value: '1kingdayo@gmail.com',
+<<<<<<< HEAD
     href: 'https://mail.google.com/mail/?view=cm&to=1kingdayo@gmail.com'
+=======
+    href: 'mailto:1kingdayo@gmail.com'
+>>>>>>> fecd584fa83f0f4c19d985967a1a61a4cbbb37c8
   },
   {
     icon: Phone,
