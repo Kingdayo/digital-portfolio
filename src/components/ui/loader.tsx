@@ -232,14 +232,12 @@ export const Loader: FC<{ progress: number }> = ({ progress }) => {
   return (
     <div
       className="fixed top-0 left-0 w-full h-full z-[100]"
-      style={{ pointerEvents: 'none' }}
     >
       <Suspense fallback={<LoaderComponent />}>
         <Canvas
           shadows
           camera={{ position: [0, 0, 12], fov: 35 }}
           gl={{ preserveDrawingBuffer: true, antialias: true, powerPreference: 'high-performance' }}
-          style={{ pointerEvents: 'auto' }}
         >
           <Scene progress={progress} colors={colors} />
           <Preload all />
